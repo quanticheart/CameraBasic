@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><!--https://developer.android.com/guide/navigation/navigation-getting-started-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/permisionFragment">
+
+    <fragment
+        android:id="@+id/permisionFragment"
+        android:name="quanticheart.com.cameraview.ui.fragment.PermissionFragment"
+        android:label="PermisionFragment" >
+        <action
+            android:id="@+id/action_permisionFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="quanticheart.com.cameraview.ui.fragment.CameraFragment"
+        android:label="CameraFragment" >
+        <action
+            android:id="@+id/action_cameraFragment_to_permisionFragment"
+            app:destination="@id/permisionFragment" />
+        <action
+            android:id="@+id/action_cameraFragment_to_previewFragment"
+            app:destination="@id/previewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/previewFragment"
+        android:name="quanticheart.com.cameraview.ui.fragment.PreviewFragment"
+        android:label="PreviewFragment" >
+        <action
+            android:id="@+id/action_previewFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_previewFragment_to_permisionFragment"
+            app:destination="@id/permisionFragment" />
+    </fragment>
+</navigation>

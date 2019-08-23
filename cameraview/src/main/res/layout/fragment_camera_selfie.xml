@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/containerCamera"
+    android:orientation="vertical">
+
+    <TextureView
+        android:id="@+id/surfaceCameraSelfie"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/viewControllerCameraSelfie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/surfaceCameraSelfie"
+        app:layout_constraintEnd_toEndOf="@id/surfaceCameraSelfie"
+        app:layout_constraintStart_toStartOf="@id/surfaceCameraSelfie"
+        app:layout_constraintTop_toBottomOf="@id/viewController2CameraSelfie" />
+
+    <View
+        android:id="@+id/viewControllerCameraSelfie"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/surfaceCameraSelfie" />
+
+    <View
+        android:id="@+id/viewController2CameraSelfie"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/surfaceCameraSelfie"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/viewController2CameraSelfie"
+        app:layout_constraintStart_toStartOf="@id/viewController2CameraSelfie"
+        app:layout_constraintTop_toTopOf="@id/viewController2CameraSelfie"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_flash"
+        app:layout_constraintBottom_toBottomOf="@id/viewController2CameraSelfie"
+        app:layout_constraintEnd_toEndOf="@id/viewController2CameraSelfie"
+        app:layout_constraintTop_toTopOf="@id/viewController2CameraSelfie"
+        tools:ignore="ContentDescription"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/tvCameraSelfie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="Posicione seu rosto dentro do circulo e toque no botão para capturar uma imagem."
+        app:layout_constraintEnd_toEndOf="@id/viewControllerCameraSelfie"
+        app:layout_constraintStart_toStartOf="@id/viewControllerCameraSelfie"
+        app:layout_constraintTop_toTopOf="@id/viewControllerCameraSelfie" />
+
+    <ImageButton
+        android:id="@+id/btnCameraSelfieGetPhoto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_cam_buttom"
+        app:layout_constraintEnd_toEndOf="@id/viewControllerCameraSelfie"
+        app:layout_constraintStart_toStartOf="@id/viewControllerCameraSelfie"
+        app:layout_constraintTop_toBottomOf="@id/tvCameraSelfie"
+        tools:ignore="ContentDescription"
+        tools:layout_editor_absoluteY="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

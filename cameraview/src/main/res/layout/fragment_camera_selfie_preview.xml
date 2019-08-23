@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glWebCheckin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imgCameraSelfie"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/viewControllerCameraSelfie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewControllerCameraSelfie"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/surfaceCameraSelfie" />
+
+    <View
+        android:id="@+id/viewController2CameraSelfie"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/surfaceCameraSelfie"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Revise sua imagem"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/viewController2CameraSelfie"
+        app:layout_constraintStart_toStartOf="@id/viewController2CameraSelfie"
+        app:layout_constraintTop_toTopOf="@id/viewController2CameraSelfie" />
+
+    <TextView
+        android:id="@+id/tvCameraSelfie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:text="Certifique-se de que seu rosto está sendo exibido de maneira clara, se não, tire outra selfie."
+        app:layout_constraintEnd_toEndOf="@id/viewControllerCameraSelfie"
+        app:layout_constraintStart_toStartOf="@id/viewControllerCameraSelfie"
+        app:layout_constraintTop_toTopOf="@id/viewControllerCameraSelfie" />
+
+    <Button
+        android:id="@+id/btnCameraSelfieCancel"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:text="Refazer"
+        app:layout_constraintEnd_toStartOf="@+id/glWebCheckin"
+        app:layout_constraintStart_toStartOf="@+id/viewControllerCameraSelfie"
+        app:layout_constraintTop_toBottomOf="@id/tvCameraSelfie"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/btnCameraSelfieSend"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:text="Enviar"
+        app:layout_constraintEnd_toEndOf="@+id/viewControllerCameraSelfie"
+        app:layout_constraintStart_toStartOf="@+id/glWebCheckin"
+        app:layout_constraintTop_toBottomOf="@id/tvCameraSelfie"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
