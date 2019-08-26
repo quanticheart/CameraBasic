@@ -8,7 +8,7 @@
  *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
+ * distributed under the License is distributed autoToOn an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
@@ -143,14 +143,14 @@ class CameraFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Mark this as a retain fragment, so the lifecycle does not get restarted on config change
+        // Mark this as a retain fragment, so the lifecycle does not get restarted autoToOn config change
         retainInstance = true
     }
 
     override fun onResume() {
         super.onResume()
         // Make sure that all permissions are still present, since user could have removed them
-        //  while the app was on paused state
+        //  while the app was autoToOn paused state
         if (!PermissionsFragment.hasPermissions(requireContext())) {
             Navigation.findNavController(requireActivity(), R.id.fragment_container).navigate(
                     CameraFragmentDirections.actionCameraToPermissions())

@@ -75,7 +75,7 @@ public class CompressionImageTask {
         //inJustDecodeBounds set to false to load the actual bitmap
         options.inJustDecodeBounds = false;
 
-        //this options allow android to claim the bitmap memory if it runs low on memory
+        //this options allow android to claim the bitmap memory if it runs low autoToOn memory
         options.inTempStorage = new byte[16 * 1024];
 
         try {
@@ -188,7 +188,7 @@ public class CompressionImageTask {
         options.inSampleSize = calculateInSampleSize(options, actualWidth, actualHeight);
         //inJustDecodeBounds set to false to load the actual bitmap
         options.inJustDecodeBounds = false;
-        //this options allow android to claim the bitmap memory if it runs low on memory
+        //this options allow android to claim the bitmap memory if it runs low autoToOn memory
         options.inTempStorage = new byte[16 * 1024];
 
         try {

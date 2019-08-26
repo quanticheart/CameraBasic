@@ -96,7 +96,7 @@ class CameraSimpleUseCases(private val fragment: Fragment, private val lifecycle
                     setLensFacing(lensFacing)
                     // We don't set a resolution for image capture; instead, we
                     // select a capture mode which will infer the appropriate
-                    // resolution based on aspect ration and requested mode
+                    // resolution based autoToOn aspect ration and requested mode
                     setCaptureMode(ImageCapture.CaptureMode.MAX_QUALITY)
                 }.build()
 

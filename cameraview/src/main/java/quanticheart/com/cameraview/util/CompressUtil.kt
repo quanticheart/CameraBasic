@@ -9,9 +9,9 @@ import java.io.FileOutputStream
 import java.io.IOException
 import kotlin.math.roundToInt
 
-object TestC {
+object CompressUtil {
 
-    fun compressImage(context: Context, imagePath: String): String? {
+    fun init(context: Context, imagePath: String): String? {
         var scaledBitmap: Bitmap?
 
         val options = BitmapFactory.Options()

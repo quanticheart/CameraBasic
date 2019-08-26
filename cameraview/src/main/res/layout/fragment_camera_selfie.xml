@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerCamera"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/containerCamera"
     android:orientation="vertical">
 
     <TextureView
@@ -58,17 +58,31 @@
         app:layout_constraintTop_toTopOf="@id/viewController2CameraSelfie"
         tools:ignore="ContentDescription" />
 
-    <ImageButton
+    <quanticheart.com.cameraview.ui.FlashImageView2
+        android:id="@+id/btnCameraSelfieFlash"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_flash"
+        android:padding="10dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/viewController2CameraSelfie"
         app:layout_constraintEnd_toEndOf="@id/viewController2CameraSelfie"
         app:layout_constraintTop_toTopOf="@id/viewController2CameraSelfie"
         tools:ignore="ContentDescription"
         tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/btnCameraSelfieTrade"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/surfaceCameraSelfie"
+        app:layout_constraintStart_toStartOf="@id/surfaceCameraSelfie"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tvCameraSelfie"
